@@ -86,7 +86,12 @@ class ShoppingListController extends Controller
         // Generar el PDF
         $pdf = Pdf::loadView('lists.pdf', compact('list', 'total'));
 
-        // Descargar el PDF con un nombre adecuado
-        return $pdf->download('lista-' . \Str::slug($list->title) . '.pdf');   
+        // Devolver el PDF para que el navegador lo abra en una nueva pestaña (inline)
+        $filename = 'lista-' . \Str::slug($list->title) . '.pdf';
+
+        // stream() envía el PDF al navegador, y aquí añadimos la cabecera Content-Disposition: inline
+        return response($pdf->stream(), 200)
+            ->header('Content-Type', 'application/pdf')
+            ->header('Content-Disposition', 'inline; filename="' . $filename . '"');
     }
 }
