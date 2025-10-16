@@ -12,7 +12,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::orderBy('name')->get();
-    return view('product.index', compact('products'));
+    return view('products.index', compact('products'));
     }
 
     // Guardar un nuevo producto

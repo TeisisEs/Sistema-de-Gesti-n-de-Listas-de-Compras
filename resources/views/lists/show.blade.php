@@ -9,7 +9,7 @@
   <!-- Información de la Lista -->
   <div class="bg-white rounded-xl shadow-lg p-8 mb-6">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-      <div>
+      <div class="flex-1">
         <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ $list->title }}</h2>
         <div class="flex flex-wrap gap-4 text-sm text-gray-600">
           <div class="flex items-center">
@@ -30,6 +30,19 @@
             <strong class="text-gray-800">Notas:</strong> {{ $list->notes }}
           </p>
         @endif
+      </div>
+
+      <!-- 📄 NUEVO: Botón para generar PDF -->
+      <div class="flex flex-col gap-2">
+        <a href="{{ route('lists.pdf', $list) }}" 
+           class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105"
+           target="_blank">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          Generar PDF
+        </a>
+        <span class="text-xs text-center text-gray-500">Descargar reporte</span>
       </div>
     </div>
   </div>

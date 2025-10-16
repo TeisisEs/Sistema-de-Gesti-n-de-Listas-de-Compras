@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ShoppingList;
 use App\Models\Product;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ShoppingListController extends Controller
 {
@@ -12,13 +13,13 @@ class ShoppingListController extends Controller
     public function index()
     {
         $lists = ShoppingList::orderBy('due_date', 'desc')->get();
-    return view('list.index', compact('lists'));
+    return view('lists.index', compact('lists'));
     }
 
     // Mostrar formulario de creación
     public function create()
     {
-    return view('list.create');
+    return view('lists.create');
     }
 
     // Guardar nueva lista
@@ -42,7 +43,7 @@ class ShoppingListController extends Controller
         $list->load('products');
         $allProducts = Product::orderBy('name')->get();
 
-    return view('list.show', compact('list', 'allProducts'));
+    return view('lists.show', compact('list', 'allProducts'));
     }
 
     // Agregar un producto a una lista
@@ -68,5 +69,24 @@ class ShoppingListController extends Controller
         }
 
         return redirect()->route('lists.show', $list)->with('success', 'Producto agregado a la lista.');
+    }
+
+    //  Generar PDF de la lista
+    public function generatePDF(ShoppingList $list)
+    {
+        // Cargar productos con sus relaciones
+        $list->load('products');
+        
+        // Calcular el total
+        $total = 0;
+        foreach ($list->products as $product) {
+            $total += $product->price * $product->pivot->quantity;
+        }
+
+        // Generar el PDF
+        $pdf = Pdf::loadView('lists.pdf', compact('list', 'total'));
+
+        // Descargar el PDF con un nombre adecuado
+        return $pdf->download('lista-' . \Str::slug($list->title) . '.pdf');   
     }
 }

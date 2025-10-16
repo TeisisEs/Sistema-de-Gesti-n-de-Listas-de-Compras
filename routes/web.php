@@ -18,6 +18,10 @@ Route::resource('lists', ShoppingListController::class)->only([
 Route::post('lists/{list}/add-product', [ShoppingListController::class, 'addProduct'])
     ->name('lists.addProduct');
 
+//  Generar PDF de una lista
+Route::get('lists/{list}/pdf', [ShoppingListController::class, 'generatePDF'])
+    ->name('lists.pdf');
+
 // Rutas para productos
 Route::get('products', [ProductController::class, 'index'])->name('products.index');
 Route::post('products', [ProductController::class, 'store'])->name('products.store');
