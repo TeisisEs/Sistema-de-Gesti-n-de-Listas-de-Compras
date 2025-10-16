@@ -8,8 +8,7 @@
 ![Tailwind](https://img.shields.io/badge/Tailwind-2.2.19-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Organiza tus compras de manera eficiente con un sistema moderno y profesional.  
-**Demo en Vivo • Características • Instalación • Despliegue**
+Organiza tus compras 
 
 </div>
 
@@ -115,5 +114,5 @@ Entre las próximas mejoras planificadas se incluyen:
 -  **Panel de Estadísticas:** Mostrar reportes de compras frecuentes y gasto total por período.   
 -  **Modo Oscuro:** Personalización visual para mejorar la experiencia del usuario.  
 
-*Tras la implementación del sistema multiusuario, se planea desplegar la aplicación en **Render**, aprovechando su entorno gratuito y compatibilidad con Laravel.*
+#### *Tras la implementación del sistema multiusuario, se planea desplegar la aplicación en **Render**, aprovechando su entorno gratuito y compatibilidad con Laravel.*
 ---
