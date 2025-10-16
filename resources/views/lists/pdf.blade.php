@@ -17,11 +17,19 @@
     <!-- Header Corporativo -->
     <div class="document-header">
         <div class="header-content">
-            <div class="company-logo">
-                <div class="company-logo-text"> ShopList Pro</div>
+            <div class="header-left">
+                <div class="company-logo">
+                    <div class="company-logo-text"> ShopList Pro</div>
+                </div>
+                <h1 class="document-title">Lista de Compras</h1>
+                <p class="document-subtitle">Reporte Detallado de Productos y Costos</p>
             </div>
-            <h1 class="document-title">Lista de Compras</h1>
-            <p class="document-subtitle">Reporte Detallado de Productos y Costos</p>
+            <div class="header-right">
+                <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 6px; text-align: center;">
+                    <div style="font-size: 10px; opacity: 0.9; margin-bottom: 3px;">DOCUMENTO</div>
+                    <div style="font-size: 20px; font-weight: bold; line-height: 1;">#{{ str_pad($list->id, 4, '0', STR_PAD_LEFT) }}</div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -71,7 +79,7 @@
     
     @if($list->products->isEmpty())
         <div class="empty-state">
-            <div class="empty-state-icon">⚠️</div>
+            <div class="empty-state-icon"></div>
             <p class="empty-state-text">Esta lista no contiene productos</p>
         </div>
     @else
@@ -130,7 +138,7 @@
     
     <!-- Footer -->
     <div class="document-footer">
-        <p class="footer-company">ShopList Pro - Sistema Profesional de Gestión de Compras</p>
+        <p class="footer-company">ShopList Pro - Sistema de Gestión de Compras</p>
         <p class="footer-tech">Desarrollado con Laravel {{ app()->version() }} & DomPDF</p>
         <p class="footer-website">www.shoplistpro.com | soporte@shoplistpro.com</p>
     </div>
