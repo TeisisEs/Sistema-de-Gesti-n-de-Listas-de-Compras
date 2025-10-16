@@ -16,7 +16,7 @@ body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     color: #2d3748;
     line-height: 1.4;
-    padding: 15px;
+    padding: 10px;
     background: #ffffff;
     font-size: 11px;
 }
@@ -30,8 +30,8 @@ body {
 .document-header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 20px 25px;
-    margin: -15px -15px 20px -15px;
+    padding: 8px 15px;
+    margin: -10px -10px 5px -10px;
     position: relative;
     overflow: hidden;
 }
@@ -39,10 +39,10 @@ body {
 .document-header::before {
     content: '';
     position: absolute;
-    top: -30%;
-    right: -5%;
-    width: 200px;
-    height: 200px;
+    top: -40%;
+    right: -8%;
+    width: 150px;
+    height: 150px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 50%;
 }
@@ -70,13 +70,13 @@ body {
 .company-logo {
     display: inline-block;
     background: white;
-    padding: 8px 15px;
-    border-radius: 6px;
-    margin-bottom: 8px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 3px;
 }
 
 .company-logo-text {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: #667eea;
     margin: 0;
@@ -84,25 +84,25 @@ body {
 }
 
 .document-title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
-    margin: 5px 0 3px 0;
+    margin: 4px 0 2px 0;
     letter-spacing: -0.3px;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .document-subtitle {
-    font-size: 11px;
+    font-size: 9px;
     opacity: 0.9;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 /* ===== GRID DE INFORMACIÓN COMPACTO ===== */
 .info-grid {
     display: table;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     overflow: hidden;
@@ -115,7 +115,7 @@ body {
 
 .info-cell {
     display: table-cell;
-    padding: 8px 12px;
+    padding: 7px 12px;
     border-bottom: 1px solid #e2e8f0;
     vertical-align: middle;
 }
@@ -151,22 +151,22 @@ body {
 /* ===== SECCIÓN DE PRODUCTOS COMPACTA ===== */
 .section-header {
     background: #edf2f7;
-    padding: 10px 15px;
-    margin: 15px 0 10px 0;
+    padding: 8px 12px;
+    margin: 12px 0 8px 0;
     border-left: 3px solid #667eea;
     border-radius: 3px;
 }
 
 .section-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     color: #2d3748;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .section-count {
-    font-size: 11px;
+    font-size: 10px;
     color: #718096;
     font-weight: normal;
 }
@@ -175,7 +175,7 @@ body {
 .products-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-top: 8px;
     background: white;
     border: 1px solid #e2e8f0;
     border-radius: 6px;
@@ -248,7 +248,7 @@ body {
 
 /* ===== SECCIÓN DE TOTALES COMPACTA ===== */
 .total-section {
-    margin-top: 15px;
+    margin-top: 12px;
     background: white;
     border-radius: 6px;
     overflow: hidden;
@@ -258,7 +258,7 @@ body {
 .subtotal-row {
     display: table;
     width: 100%;
-    padding: 8px 15px;
+    padding: 7px 12px;
     border-bottom: 1px solid #e2e8f0;
     font-size: 10px;
 }
@@ -282,7 +282,7 @@ body {
 .total-row {
     display: table;
     width: 100%;
-    padding: 12px 15px;
+    padding: 10px 12px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
@@ -330,16 +330,16 @@ body {
 .notes-section {
     background: #fffaf0;
     border-left: 3px solid #ed8936;
-    padding: 12px 15px;
-    margin: 15px 0;
+    padding: 10px 12px;
+    margin: 12px 0;
     border-radius: 3px;
 }
 
 .notes-title {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     color: #c05621;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: 0.3px;
 }
@@ -347,13 +347,13 @@ body {
 .notes-content {
     font-size: 10px;
     color: #744210;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 /* ===== PIE DE PÁGINA COMPACTO ===== */
 .document-footer {
-    margin-top: 20px;
-    padding-top: 12px;
+    margin-top: 15px;
+    padding-top: 10px;
     border-top: 1px solid #e2e8f0;
     text-align: center;
 }
