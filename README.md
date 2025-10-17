@@ -16,8 +16,12 @@ Organiza tus compras
 
 ##  Descripción
 
-**ShopList Pro** es una aplicación web desarrollada en **Laravel 12** que permite gestionar listas de compras de manera intuitiva y profesional.  
-Con una interfaz moderna construida con **Tailwind CSS**, ofrece funcionalidades completas para administrar productos, crear listas personalizadas y generar reportes en **PDF**.
+**ShopList Pro** es una aplicación web desarrollada en **Laravel 12** que permite gestionar listas de compras de manera intuitiva.  
+Con una interfaz  construida con **Tailwind CSS**, ofrece funcionalidades para administrar productos, crear listas personalizadas y generar reportes en **PDF**.
+
+### Video Demo
+
+**https://www.youtube.com/watch?v=1ddXS9KR1Qg**
 
 ---
 
